@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <title>无线字幕，语音识别和翻译</title>
+    <script src="script/Transcript.js" async></script>
+    <script src="script/UseTranslation.js" async></script>
+    <script src="script/UseSimple.js" async></script>
+    <script src="script/LanguagesOfTranslate.js" async></script>
+    <script src="script/Translate.js" async></script>
+    <script src="script/Download-and-Clear.js" async></script>
+    <script src="script/md5.js" async></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b00a2c3001.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/textarea.css">
+    <link rel="stylesheet" href="style/appearance.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+
+<div id="title0">
+<img class="girl" src="girl.png" alt="girl" id="girl">
+
+<p class="title1 ">无限字幕</p>
+<br/>
+<p class="title2">——声音有形，理解无疑，在无限字幕阅读世界的声音</p>
+
+<article class="message is-info">
+    <div class="message-header">
+        <p>Tips</p>
+        <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+        欢迎使用无限字幕！
+        <br/>
+        <br/>
+        本网页支持将实时音频转化为文字。您需要自行选择音频语言，点击“开始识别”并播放音频。若音频语言无法选择，请尝试刷新网页。
+        <br/>
+        <br/>
+        若您需要翻译识别出的文字，请点击“翻译文字”。您亦可将需要翻译的文字直接复制在左边蓝色的文本框内，在右边绿色的区域将其翻译。
+        <br/>
+        <br/>
+        文字可随时清空，可下载成文本文件。
+        <br/>
+        <br/>
+        希望您使用愉快～(∠・ω< )⌒★
+    </div>
+</article>
+</div>
+
+<button id="useSimple" class="button is-info is-responsive">
+                <span class="icon">
+                    <i class="fas fa-circle-nodes"></i>
+                </span>
+    <span>简洁模式</span>
+</button>
+
+<div class="container">
+    <div id="allTranscriptArea">
+        <div class="control has-icons-left">
+            <label for="languageOfVoice"></label>
+            <div class="select is-info">
+                <select id="languageOfVoice" class="is-hovered">
+                    <option selected>音频语言</option>
+                </select>
+            </div>
+            <div class="icon is-small is-left">
+                <i class="fas fa-music"></i>
+            </div>
+        </div>
+        <br/>
+        <div id="transcript">
+            <label for="transcription"></label>
+            <textarea id="transcription" class="textarea is-info is-large" placeholder="ヾ(≧▽≦*)o" rows="10" cols="40"></textarea>
+        </div>
+        <br/>
+        <div>
+            <button id="starTranscript" class="button is-info is-responsive">
+                <span class="icon">
+                    <i class="fas fa-play"></i>
+                </span>
+                <span>开始识别</span>
+            </button>
+            <button id="stopTranscript" class="button is-info is-responsive">
+                <span class="icon">
+                    <i class="fas fa-stop"></i>
+                </span>
+                <span>停止识别</span>
+            </button>
+            <button id="downloadTranscription" class="button is-info is-responsive">
+                <span class="icon">
+                    <i class="fas fa-file-arrow-down"></i>
+                </span>
+                <span>下载文字</span>
+            </button>
+            <button id="clearTranscription" class="button is-info is-responsive">
+                <span class="icon">
+                    <i class="fas fa-broom"></i>
+                </span>
+                <span>清空</span>
+            </button>
+            <button id="useTranslate" class="button is-info is-responsive">
+                <span class="icon">
+                    <i class="fas fa-language"></i>
+                </span>
+                <span>翻译文字</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div id="allTranslateArea">
+        <div class="control has-icons-left">
+            <label for="toLanguageSelect"></label>
+            <div class="select is-success">
+                <select id="toLanguageSelect">
+                    <option selected>翻译成</option>
+                </select>
+            </div>
+            <div class="icon is-small is-left">
+                <i class="fas fa-earth-asia"></i>
+            </div>
+        </div>
+        <br/>
+        <div id="translate">
+            <label for="translation"></label>
+            <textarea  id="translation" class="textarea is-success is-large" placeholder="～(∠・ω< )⌒★" rows="10" cols="45"></textarea>
+        </div>
+        <br/>
+        <div>
+            <button id="starTranslate" class="button is-success is-responsive">
+                <span class="icon">
+                    <i class="fas fa-language"></i>
+                </span>
+                <span>点击翻译</span>
+            </button>
+            <button id="downloadTranslation" class="button is-success is-responsive">
+                <span class="icon">
+                    <i class="fas fa-file-arrow-down"></i>
+                </span>
+                <span>下载文字</span>
+            </button>
+            <button id="clearTranslation" class="button is-success is-responsive">
+                <span class="icon">
+                    <i class="fas fa-broom"></i>
+                </span>
+                <span>清空</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

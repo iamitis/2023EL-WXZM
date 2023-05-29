@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    left: 350px;
+    height: 100vh;
+    padding-top: 10vh;
+}
+
+#allTranscriptArea {
+    transition: margin-left 0.9s;
+}
+
+#allTranslateArea {
+    display: none;
+    margin-left: 65px;
+}
+
+select {
+    min-width: 10px;
+}

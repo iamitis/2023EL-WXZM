@@ -1,0 +1,44 @@
+body {
+    background-color: #DAE3F3;
+}
+
+.title1 {
+    font-family: "微软雅黑 Light", serif;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 300;
+    color: #5186D3;
+    -webkit-box-reflect: below -30px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(55%, transparent), to(rgba(81,134,211, .3)));
+}
+
+.title2 {
+    font-family: "微软雅黑 Light", serif;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    color: #5186D3;
+    -webkit-box-reflect: below -10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, transparent), to(rgba(81,134,211, .3)));
+}
+
+.girl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+
+}
+
+.message {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+#useSimple {
+    position: absolute;
+    left: 10px;
+    bottom: 50px;
+}
