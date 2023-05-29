@@ -21,7 +21,7 @@ function populateVoiceList() {
 }
 
 function simplifyNames(name) {
-    let index = name.indexOf('-') + 2;
+    let index = name.indexOf('-') + 1;
     return name.slice(index);
 }
 
